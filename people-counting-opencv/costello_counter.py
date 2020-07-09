@@ -1,7 +1,7 @@
 # set https_proxy=http://proxy.ch.intel.com:911
 # set http_proxy=http://proxy.ch.intel.com:911
 # cd C:\Users\sorchaco\Documents\PersonCounter\people-counting-opencv\people-counting-opencv
-# python costello_counter.py -p mobilenet_ssd\MobileNetSSD_deploy.prototxt -m mobilenet_ssd\MobileNetSSD_deploy.caffemodel -o output/webcam_output.avi
+# python costello_counter.py -p mobilenet_ssd/MobileNetSSD_deploy.prototxt -m mobilenet_ssd/MobileNetSSD_deploy.caffemodel -i videos/webcamfootage.mp4 -o output/output_wf1.avi
 
 # import the necessary packages
 import numpy as np
@@ -202,12 +202,12 @@ while True:
 		# otherwise, there is a trackable object so we can utilize it
 		# to determine direction
 		else:
-			# the difference between the x-coordinate of the *current*
+			# the difference between the y-coordinate of the *current*
 			# centroid and the mean of *previous* centroids will tell
 			# us in which direction the object is moving (negative for
 			# 'Right' and positive for 'Left')
-			x = [c[1] for c in to.centroids]
-			direction = centroid[1] - np.mean(x)
+			y = [c[1] for c in to.centroids]
+			direction = centroid[1] - np.mean(y)
 			to.centroids.append(centroid)
 
 			# check to see if the object has been counted or not
@@ -232,9 +232,9 @@ while True:
 		# draw both the ID of the object and the centroid of the
 		# object on the output frame
 		text = "ID {}".format(objectID)
-		cv2.putText(frame, text, (centroid[0] - 10, centroid[1] - 10),
+		cv2.putText(frame, text, (centroid[1] + 10, centroid[0] + 10),
 			cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 0), 2)
-		cv2.circle(frame, (centroid[0], centroid[1]), 4, (255, 255, 255), -1)
+		cv2.circle(frame, (centroid[1], centroid[0]), 4, (255, 255, 255), -1)
 
 	# construct a tuple of information we will be displaying on the
 	# frame
