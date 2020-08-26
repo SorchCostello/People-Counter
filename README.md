@@ -1,4 +1,4 @@
-# People Counter Shared
+# People Counter
 As part of our summer internship, Sarah (Sarahdolan1) & I have been asked to make a people counter code.
 This code uses openCV and python to track people walking across a line in the middle of the screen whilst tracking their direction.
 inspiration for the code https://www.pyimagesearch.com/2018/08/13/opencv-people-counter/
@@ -8,7 +8,7 @@ inspiration for the code https://www.pyimagesearch.com/2018/08/13/opencv-people-
 * We have just posted our most recent version of our code that is fully functional & well commented, "people_counter.py".
 
 ## How To Use:
-to run: python people_counter.py 
+* to run: python people_counter.py 
 
 ## Folders
 mobilenet_ssd => Contains the MobileNet SSD model used (prototxt and caffe files)  
@@ -18,13 +18,12 @@ pyimagesearch => Contains further code used to support the main people counter f
 
 
 ## Setup
-     1. Make sure you have OpenVINO installed
-     2. Install the required libraries (OpenCV, NumPy, SciPy, dlib, imutils) by searching online or using pip install
-     3. Download this git repo as a zip
-     4. Extract the file to the Documents directory
+     1. Install the required libraries (OpenCV, NumPy, SciPy, dlib, imutils) by searching online or using pip install
+     2. Download this git repo as a zip
+     3. Extract the file to the Documents directory
 
 ## Running The Code
-     5. Change directory
+     4. Change directory
           ~ cd C:\Users\<USERNAME>\Documents\PeopleCounterShared
-     6. Run the code
+     5. Run the code
           ~ python people_counter.py 
