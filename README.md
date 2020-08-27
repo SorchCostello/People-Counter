@@ -15,7 +15,7 @@ Inspiration for the code https://www.pyimagesearch.com/2018/08/13/opencv-people-
 ## Folders
 mobilenet_ssd => Contains the MobileNet SSD model used (prototxt and caffe files)  
 pyimagesearch => Contains further code used to support the main people counter files  
-_pycache_ => Contains a random configuration of files
+pycache => Contains a random configuration of files
 
 
 ## Setup
