@@ -9,6 +9,8 @@ Inspiration for the code https://www.pyimagesearch.com/2018/08/13/opencv-people-
 
 ## How To Use
 * to run: python people_counter.py 
+* ensure: In the code it states the video file name and loaction, so double check that is correct (line 244).
+
 
 ## Folders
 mobilenet_ssd => Contains the MobileNet SSD model used (prototxt and caffe files)  
